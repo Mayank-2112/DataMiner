@@ -15,10 +15,9 @@ body{
     color: white;
     border: none;
     width: 50px;
-    height: 50px;
-}
-.top i{
-    font-weight: bolder;
+    font-size: 1rem;
+    text-align: center;
+    height: 40px;
 }
 .navbar .logo1{
     width: 100px;
