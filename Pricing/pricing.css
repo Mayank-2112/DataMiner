@@ -1,0 +1,72 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #E3F6F5;
+}
+.navbar{
+  padding:0 30px;
+  height: 100px;
+}
+.navbar .logo1{
+  width: 100px;
+  height: 100px;
+}
+.navbar .logo2{
+  position: absolute;
+  top: -30px;
+  left: 80px;
+  width: 200px;
+  height: 200px;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu{
+  background: transparent;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{
+  background-color: #272343;
+  color: white;
+}
+.navbar .navbar-nav .nav-item a{
+  padding: 0 15px 0 15px;
+  color:#272343;
+  font-size: 1.2rem;
+  transition: 1s;
+}
+.navbar .navbar-nav .nav-item a:hover{
+  font-weight: bold;
+  transform: scale(1.1);
+}
+.navbar .navbar-nav .nav-but{
+  margin: 0 10px 0 10px;
+}
+.navbar .navbar-nav .nav-but a{
+  color:#272343;
+  border: 1px solid #272343;
+  transition: 1s;
+}
+.navbar .navbar-nav .nav-but a:hover{
+  background-color: #272343;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.container {
+  max-width: 960px;
+  margin-top: 300px;
+  color: #272343;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+.btn{
+  border: 1px solid #272343;
+  color: #272343;
+}
+.btn:hover{
+  background-color: #272343;
+  color: white;
+}

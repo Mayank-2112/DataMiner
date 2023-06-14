@@ -1,0 +1,97 @@
+body{
+    background-image: linear-gradient(to bottom right,#E3F6F5,#BAE8E8, #272343);
+    height: 100vh;
+}
+.container{
+    min-height: 72vh;
+    font-family: 'Varela Round' , sans-serif ;
+    display: flex;
+    padding: 20px;
+    width: 60%;
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-size: cover;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.con2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+}
+.con2 h1{
+    font-size: 4vh;
+    color: #272343;
+    font-weight: bolder;
+    text-align: center;
+}
+.detailsec{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#form{
+    padding-top: 20px;
+    width: 50%;
+}
+#form label {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2vh;
+    font-weight: 700;
+    padding: 5px 0px;
+    color: #272343
+}
+#form input {
+    border:none;
+    border-bottom:3px solid #272343;
+    width: 100%;
+    border-radius: 3px;
+    margin: 20px 0px;
+    outline: none;
+    font-size: 2vh;
+    padding: 5px 5px;  
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;  
+}
+#form select{
+    border:none;
+    border-bottom:3px solid #272343;
+    width: 100%;
+    margin: 10px 0px;
+    outline: none;
+    font-size: 2vh;
+    padding: 5px 0px;  
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;  
+}
+#btn{
+    text-align: center;
+    padding:10px 20px;
+    position: relative;
+    color: #fff;
+    background-color: #272343;
+    border:none;
+    outline: none;
+    margin: 5px 10px;
+    border-radius: 5px;
+    font-size: 2vh;
+    transition: 1s;
+    font-family: 'Comfortaa', cursive;
+}
+#btn:hover{
+    color: #272343;
+    background-color: white;
+    transform: scale(1.1);
+    border: 1px solid #272343;
+}

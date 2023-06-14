@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #E3F6F5;
+}
+.navbar{
+    padding:0 30px;
+    height: 100px;
+}
+.navbar .logo1{
+    width: 100px;
+    height: 100px;
+}
+.navbar .logo2{
+    position: absolute;
+    top: -30px;
+    left: 80px;
+    width: 200px;
+    height: 200px;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu{
+    background: transparent;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{
+    background-color: #272343;
+    color: white;
+}
+.navbar .navbar-nav .nav-item a{
+    padding: 0 15px 0 15px;
+    color:#272343;
+    font-size: 1.2rem;
+    transition: 1s;
+}
+.navbar .navbar-nav .nav-item a:hover{
+    font-weight: bold;
+    transform: scale(1.1);
+}
+.navbar .navbar-nav .nav-but{
+    margin: 0 10px 0 10px;
+}
+.navbar .navbar-nav .nav-but a{
+    color:#272343;
+    border: 1px solid #272343;
+    transition: 1s;
+}
+.navbar .navbar-nav .nav-but a:hover{
+    background-color: #272343;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.row{
+    margin-top: 150px;
+}
+.row .content{
+    padding-left: 30px;
+    width: 90%;
+}
+header .content h1{
+    color: #272343;
+    font-size: 2.5rem;
+    position: relative;
+    font-weight: bolder;
+}
+.content h1::after{
+    content: '|';
+    position: absolute;
+    right: 0;
+    width: 100%;
+    color: #272343;
+    background-color: #E3F6F5;
+    animation: animate 4s infinite;
+}
+@keyframes animate{
+    to{
+        width: 15%;
+    }
+
+}
+header .content .para{
+    color: #272343;
+    font-size: 1.3rem;
+}
+header .content a{
+    background-color: #BAE8E8;
+    color: #272343;
+    border-radius: 20px;
+    padding: 8px 10px 8px 10px;
+    border: none;
+    font-size: 1rem;
+    transition: 1s;
+    text-decoration: none;
+}
+header .content a:hover{
+    background-color: #272343;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+header img{
+    filter: drop-shadow(-50px 20px 5px #BAE8E8);
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+    padding-left: 50px;
+    animation: fade 5s infinite;
+}
+@keyframes fade {
+    0%,100%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+section{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+section h2{
+    text-align: center;
+    color: #272343;
+    font-weight: 500;
+    margin-bottom: -60px;
+}
+section .col-lg-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section .col-lg-3 .butt{
+    padding: 10px;
+    margin: 15px;
+    color: #272343;
+    background:transparent;
+    border: 1px solid #272343;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+section .col-lg-3 .butt:hover{
+    color: white;
+    background-color: #272343;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    transform: scale(1.1);
+}
+
+article h2{
+    color: #272343;
+    font-weight: 500;
+    text-align: center;
+}
+article .col-lg-3{
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 20px 10px 20px 10px;
+}
+  
+article .disease{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+article .disease .iconBox img{
+    width: 250px;
+    height: 250px;
+    object-fit: fill;
+}
+article .col-lg-3:hover .disease {
+    transform: rotateY(180deg);
+  }
+  
+article .col-lg-3 .disease .iconBox, 
+article .col-lg-3 .disease .diseaseName{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+article .col-lg-3 .disease .iconBox{
+    background-color:#BAE8E8;
+    color: white;
+    display: flex;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+
+} 
+article  .col-lg-3 .disease .diseaseName {
+    background-color: #BAE8E8;
+    color: white;
+    display: flex;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    transform: rotateY(180deg);
+}
+article  .col-lg-3 .disease .diseaseName .back h6{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #272343;
+}
+article  .col-lg-3 .disease .diseaseName .back a{
+    background-color:white;
+    color: #272343;
+    border-radius: 20px;
+    padding: 8px 10px 8px 10px;
+    border: none;
+    font-size: 1rem;
+    transition: 1s;
+    text-decoration: none;
+}
+article  .col-lg-3 .disease .diseaseName .back a:hover{
+    background-color: #272343;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
