@@ -30,8 +30,4 @@ function vCare(evt, disease) {
   function change() {
     nav.classList.add("bg-light");
   };
-  function fetch(){
-    var function_name = document.getElementById('mySearch').value;
-  sessionStorage.setItem(fname,function_name);
-  }
- 
+

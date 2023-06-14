@@ -147,76 +147,7 @@
             </div>
         </div>
     </nav>
-    <header>
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-12 d-flex align-items-center justify-content-center">
-            <div class="content">
-              <h1>Learn At Your Own Pace....</h1>
-              <p class="para">
-                Learn about various functions, formulas, charts and graph, and shortcuts that make our work easier. Just by searching for that function.
-              </p>
-              <input type="search" id="mySearch"placeholder="write function name">
-              <button class="bttn" onclick="fetch()">Search</button>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center">
-            <img src="learn-removebg-preview.png" alt="" class="learn" />
-          </div>
-        </div>
-      </header>
       
-    <div class="container mt-5">
-        <section>
-            <div class="content">
-            <h1>About MS Excel</h1>
-            <p>
-                Microsoft Excel is a powerful spreadsheet software developed by Microsoft. It is widely used for data analysis, financial calculations, reporting, and other tasks involving organizing and manipulating data. <br><br>
-                Excel is widely used across various industries, including finance, accounting, data analysis, project management, and many more, due to its versatility and extensive capabilities for handling and analyzing data.
-            </p>
-        </div>
-        </section>
-        <section>
-            <div class="content">
-                <h1>Main Features of MS Excel</h1>
-                <p>
-
-            1. Spreadsheet Creation: Excel provides a grid-based interface where users can create and manage spreadsheets consisting of rows and columns. Each cell within the spreadsheet can hold data, formulas, or functions.
-            <br><br>
-            2. Formulas and Functions: Excel supports a vast array of formulas and functions that enable users to perform calculations on data. These include mathematical operators, logical functions, statistical functions, date and time functions, and more.
-            <br><br>
-            3. Data Analysis Tools: Excel offers a variety of tools for data analysis, such as sorting, filtering, data validation, and conditional formatting. It also includes built-in functions for statistical analysis, regression, and data modeling. <br><br>
-
-            4. Charts and Graphs: Excel provides numerous chart types and customization options to create visual representations of data. Users can easily create bar graphs, line charts, pie charts, scatter plots, and more to present data in a visually appealing and understandable manner.
-            <br><br>
-            5. PivotTables and PivotCharts: PivotTables are powerful tools in Excel that allow users to summarize, analyze, and manipulate large sets of data. PivotCharts work in conjunction with PivotTables, providing visual representations of the summarized data.
-            <br><br>
-                </p>
-            </div>
-        </section>
-        <section>
-            <div class="content">
-                <h1>Cell,Column and Rows</h1>
-                <p>
-                    Cells: Spreadsheets are organized into cells, which are identified by a unique combination of a column letter and a row number (e.g., A1, B2, C3). Each cell can contain data, such as numbers, text, dates, or formulas.
-                    <br><br>
-                Rows and Columns: Rows run horizontally, and columns run vertically in a spreadsheet. Rows are identified by numbers, and columns are identified by letters. The intersection of a row and a column forms a cell.
-                    <br><br><br>
-                    <img src="img1.jpg" alt="">
-                </p>
-
-            </div>
-        </section>
-        <section>
-            <div class="content">
-                <h1>Data Entry</h1>
-                <p>
-                    You can enter data directly into cells by selecting a cell and typing the desired information. You can press Enter to move to the next cell in the same column or use the arrow keys to navigate. <br><br>
-                    Autofill is a convenient feature in Excel that allows you to quickly fill a series or extend a pattern of data in a selected range of cells. It can save time and effort when working with repetitive data or creating sequences.
-                    <br><br><br><br><br>
-                    <iframe src="https://www.youtube.com/embed/HMXLU9TGogc" frameborder="0"></iframe>
-                </p>
-            </div>
-        </section>
         <div id="data_row"class="row d-flex">
             <div id="content" class="col-lg-6 col-md-6 col-12">
                 <div class="details">   
@@ -229,7 +160,7 @@
             <div id="video" class="col-lg-6 col-md-6 col-12">
                 <iframe src="https://www.youtube.com/embed/2Gbl4xxAGfs" frameborder="0"></iframe>
             </div>
-    <script src="excel.js"></script>
+    <script src="excel1.js"></script>
     <script src="sccroll_out.js"></script>
     <script type="module">
         ScrollOut({
@@ -278,7 +209,7 @@
 
     </script>
 
-    <!-- <script type="module">
+    <script type="module">
 
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
@@ -362,14 +293,10 @@
                 AddAllItemsToTable(students,c);
             });
         }
+        var func_name = sessionStorage.getItem(fname);
+        window.onload.GetAllDataOnce(func_name);
         
-        var category = ['Logical','Financial','Math','Trigonometry','Lookup and reference','Engineering']
-        
-        for (let i=0; i<category.length; i++){
-            let c=category[i];
-            GetAllDataOnce(c);
-        }
-    </script> -->
+    </script>
 </body>
 
 </html>
