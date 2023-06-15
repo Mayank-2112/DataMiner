@@ -109,7 +109,7 @@ header .content .para{
     color:#388E3C;
     font-size: 1.3rem;
 }
-header .content #mySearch{
+#search #mySearch{
     background-color: #DDEEDF;
     color: #388E3C;
     border-radius: 20px;
@@ -120,8 +120,11 @@ header .content #mySearch{
     width: 50%;
     text-decoration: none;
 }
-
-header .content .bttn{
+#search h1{
+    color: #388E3C;
+    margin: 20px;
+}
+#search a{
     background-color: #8BC34A;
     color: white;
     padding: 8px 10px;
@@ -130,6 +133,7 @@ header .content .bttn{
     border-radius: 20px;
     border: none;
     margin-left: 10px;
+    text-decoration: none;
 }
 header .content .bttn:hover{
     transform: scale(1.1);
@@ -154,10 +158,13 @@ header img{
 
 .row{
     margin-bottom: 150px;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 .col-lg-3{
     display: flex;
+}
+#data-row{
+    margin: 20px 0;
 }
 #fname{
     font-size: 2.5em;
@@ -176,8 +183,8 @@ header img{
 }
 iframe{
     width: 400px;
-    height: 300px;
-    margin: 20px 60px;
+    height: 250px;
+    margin: 10px 60px;
 }
 .details{
     margin-bottom: 100px;

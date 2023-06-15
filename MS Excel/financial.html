@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <a href="/MS Excel/excel.html" class="top"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+    <a href="#" onclick="scrollToTop()" class="top"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -77,16 +77,16 @@
                             Functions
                         </a>
                         <ul class="dropdown-menu scrollable-menu bg-light">
-                            <li><a class="dropdown-item" href="#logical">Logical</a></li>
-                            <li><a class="dropdown-item" href="#">Date and TIme</a></li>
-                            <li><a class="dropdown-item" href="#lookup">Lookup and Reference</a></li>
+                            <li><a class="dropdown-item" href="/MS Excel/logical.html">Logical</a></li>
+                            <li><a class="dropdown-item" href="/MS Excel/date.html">Date and TIme</a></li>
+                            <li><a class="dropdown-item" href="/MS Excel/lookup.html">Lookup and Reference</a></li>
                             <li><a class="dropdown-item" href="#">Text</a></li>
                             <li><a class="dropdown-item" href="#">Dynamic array</a></li>
-                            <li><a class="dropdown-item" href="#engineering">Engineering</a></li>
-                            <li><a class="dropdown-item" href="#financial">Financial</a></li>
+                            <li><a class="dropdown-item" href="/MS Excel/engineering.html">Engineering</a></li>
+                            <li><a class="dropdown-item" href="/MS Excel/financial.html">Financial</a></li>
                             <li><a class="dropdown-item" href="#">Information</a></li>
-                            <li><a class="dropdown-item" href="#math">Math</a></li>
-                            <li><a class="dropdown-item" href="#trigonometry">Trigonometry</a></li>
+                            <li><a class="dropdown-item" href="/MS Excel/math.html">Math</a></li>
+                            <li><a class="dropdown-item" href="/MS Excel/trigonometry.html">Trigonometry</a></li>
                             <li><a class="dropdown-item" href="#">Statistical</a></li>
                             <li><a class="dropdown-item" href="#">Web</a></li>
                             <li><a class="dropdown-item" href="#">Database</a></li>
@@ -147,67 +147,74 @@
             </div>
         </div>
     </nav>
-      
+    <div class="container">
+        <div id="search" class="row">
+            <div class="col-lg-2 col-md-2 col-12"></div>
+            <div class="col-lg-8 col-md-8 col-12 text-center">
+                <h1>Search financial functions you want to learn about... </h1>
+                <input type="search" id="mySearch"placeholder="write function name">
+                <a class="bttn" href="#">Search</a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-12"></div>
+        </div>
         <div id="data_row"class="row d-flex">
             <div id="content" class="col-lg-6 col-md-6 col-12">
                 <div class="details">   
-                    <p id="fname"></p>
+                    <p class="target" id="fname"></p>
                     <p id="descrip"></p>
                     <p id="syntax"></p>
                     <p id="example"></p>
                 </div>
             </div>
             <div id="video" class="col-lg-6 col-md-6 col-12">
-                <iframe src="https://www.youtube.com/embed/2Gbl4xxAGfs" frameborder="0"></iframe>
+                <p id="youtube"></p>
             </div>
-    <script src="excel1.js"></script>
-    <script src="sccroll_out.js"></script>
+        </div>
+    </div>
     <script type="module">
-        ScrollOut({
-            targets: 'h1,p'
-        })
+        
 
 
 
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-        import { getDatabase,set,ref,get,child,update,remove } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-        import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"
+//         // Import the functions you need from the SDKs you need
+//         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+//         import { getDatabase,set,ref,get,child,update,remove } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+//         import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"
 
 
-        const firebaseConfig_Dataminer = {
-    apiKey: "AIzaSyDOOwSq6c0x0DQrQe0gm8m8ikqGZ_nZST4",
-    authDomain: "dataminer-a8d2c.firebaseapp.com",
-    projectId: "dataminer-a8d2c",
-    databaseURL:"https://dataminer-a8d2c-default-rtdb.firebaseio.com/",
-    storageBucket: "dataminer-a8d2c.appspot.com",
-    messagingSenderId: "390561026587",
-    appId: "1:390561026587:web:0ba2c058c468ba1caf9ebe",
-    measurementId: "G-RZVWQ59TNK"
-  };
+//         const firebaseConfig_Dataminer = {
+//     apiKey: "AIzaSyDOOwSq6c0x0DQrQe0gm8m8ikqGZ_nZST4",
+//     authDomain: "dataminer-a8d2c.firebaseapp.com",
+//     projectId: "dataminer-a8d2c",
+//     databaseURL:"https://dataminer-a8d2c-default-rtdb.firebaseio.com/",
+//     storageBucket: "dataminer-a8d2c.appspot.com",
+//     messagingSenderId: "390561026587",
+//     appId: "1:390561026587:web:0ba2c058c468ba1caf9ebe",
+//     measurementId: "G-RZVWQ59TNK"
+//   };
 
 
-        // Initialize Firebase
-        const app_Dataminer = initializeApp(firebaseConfig_Dataminer);
-        //const database = getDatabase(app);
-        const auth_Dataminer = getAuth();
-        document.getElementById("logout").addEventListener("click", function () {
-            signOut(auth_Dataminer).then(() => {
-                // Sign-out successful.
-                console.log("User logged out successfully.");
-                setTimeout(function () {
-                    window.location.replace('/main/index.html')
-                }, 1000);
-            })
+//         // Initialize Firebase
+//         const app_Dataminer = initializeApp(firebaseConfig_Dataminer);
+//         //const database = getDatabase(app);
+//         const auth_Dataminer = getAuth();
+//         document.getElementById("logout").addEventListener("click", function () {
+//             signOut(auth_Dataminer).then(() => {
+//                 // Sign-out successful.
+//                 console.log("User logged out successfully.");
+//                 setTimeout(function () {
+//                     window.location.replace('/main/index.html')
+//                 }, 1000);
+//             })
 
-        })
-        .catch(function (error) {
-            // An error happened.
-            console.log("Error logging out user:", error);
-        });
+//         })
+//         .catch(function (error) {
+//             // An error happened.
+//             console.log("Error logging out user:", error);
+//         });
 
 
-    </script>
+//     </script>
 
     <script type="module">
 
@@ -272,17 +279,17 @@
             row.appendChild(column1);
             row.appendChild(column2);
         }
-        function AddAllItemsToTable(TheStudent,c) {
+        function AddAllItemsToTable(TheStudent,f_name) {
             column1.innerHTML = "";
             column2.innerHTML = "";
             TheStudent.forEach(element => {
-                if (element.Ftype === c) {
+                if (element.Ftype === f_name) {
                     AddItemToTable(element.Name, element.Ftype, element.Description, element.Syntax, element.Example, element.Youtube);
                 }
             });
         }
         
-        function GetAllDataOnce(c){
+        function GetAllDataOnce(f_name){
             const dbRef = ref(database);
             get(child(dbRef, "users"))
             .then((snapshot) => {
@@ -290,12 +297,17 @@
                 snapshot.forEach(childSnapshot => {
                     students.push(childSnapshot.val());
                 });
-                AddAllItemsToTable(students,c);
+                AddAllItemsToTable(students,f_name);
             });
         }
-        var func_name = sessionStorage.getItem(fname);
-        window.onload.GetAllDataOnce(func_name);
+        var searchBar = document.getElementById('mySearch');
+        var searchBtn = document.getElementById('bttn');
+        var target = document.getElementById('fname');
         
+        searchBtn.addEventListener('click', () => {
+        var searchValue = searchBar.value.toUpperCase();
+        GetAllDataOnce(searchValue);
+        });
     </script>
 </body>
 

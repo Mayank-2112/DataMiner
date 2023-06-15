@@ -16,13 +16,12 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="excel.css">
-    <script src="/MS Excel/"></script>
     <script src="https://kit.fontawesome.com/eb8e9bbd12.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
-    <a href="/MS Excel/excel.html" class="top"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
+    <a href="#" onclick="scrollToTop()" class="top"><i class="fa-sharp fa-solid fa-arrow-up"></i></a>
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -148,79 +147,20 @@
             </div>
         </div>
     </nav>
-    <header>
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-12 d-flex align-items-center justify-content-center">
-            <div class="content">
-              <h1>Learn At Your Own Pace....</h1>
-              <p class="para">
-                Learn about various functions, formulas, charts and graph, and shortcuts that make our work easier. Just by searching for that function.
-              </p>
-             
+    <div class="container">
+        <div id="search" class="row">
+            <div class="col-lg-2 col-md-2 col-12"></div>
+            <div class="col-lg-8 col-md-8 col-12 text-center">
+                <h1>Search functions you want to learn about... </h1>
+                <input type="search" id="mySearch"placeholder="write function name">
+                <a class="bttn" href="#">Search</a>
             </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-12 d-flex justify-content-center">
-            <img src="learn-removebg-preview.png" alt="" class="learn" />
-          </div>
+            <div class="col-lg-2 col-md-2 col-12"></div>
         </div>
-      </header>
-      
-    <div class="container mt-5">
-        <section>
-            <div class="content">
-            <h1>About MS Excel</h1>
-            <p>
-                Microsoft Excel is a powerful spreadsheet software developed by Microsoft. It is widely used for data analysis, financial calculations, reporting, and other tasks involving organizing and manipulating data. <br><br>
-                Excel is widely used across various industries, including finance, accounting, data analysis, project management, and many more, due to its versatility and extensive capabilities for handling and analyzing data.
-            </p>
-        </div>
-        </section>
-        <section>
-            <div class="content">
-                <h1>Main Features of MS Excel</h1>
-                <p>
-
-            1. Spreadsheet Creation: Excel provides a grid-based interface where users can create and manage spreadsheets consisting of rows and columns. Each cell within the spreadsheet can hold data, formulas, or functions.
-            <br><br>
-            2. Formulas and Functions: Excel supports a vast array of formulas and functions that enable users to perform calculations on data. These include mathematical operators, logical functions, statistical functions, date and time functions, and more.
-            <br><br>
-            3. Data Analysis Tools: Excel offers a variety of tools for data analysis, such as sorting, filtering, data validation, and conditional formatting. It also includes built-in functions for statistical analysis, regression, and data modeling. <br><br>
-
-            4. Charts and Graphs: Excel provides numerous chart types and customization options to create visual representations of data. Users can easily create bar graphs, line charts, pie charts, scatter plots, and more to present data in a visually appealing and understandable manner.
-            <br><br>
-            5. PivotTables and PivotCharts: PivotTables are powerful tools in Excel that allow users to summarize, analyze, and manipulate large sets of data. PivotCharts work in conjunction with PivotTables, providing visual representations of the summarized data.
-            <br><br>
-                </p>
-            </div>
-        </section>
-        <section>
-            <div class="content">
-                <h1>Cell,Column and Rows</h1>
-                <p>
-                    Cells: Spreadsheets are organized into cells, which are identified by a unique combination of a column letter and a row number (e.g., A1, B2, C3). Each cell can contain data, such as numbers, text, dates, or formulas.
-                    <br><br>
-                Rows and Columns: Rows run horizontally, and columns run vertically in a spreadsheet. Rows are identified by numbers, and columns are identified by letters. The intersection of a row and a column forms a cell.
-                    <br><br><br>
-                    <img src="img1.jpg" alt="">
-                </p>
-
-            </div>
-        </section>
-        <section>
-            <div class="content">
-                <h1>Data Entry</h1>
-                <p>
-                    You can enter data directly into cells by selecting a cell and typing the desired information. You can press Enter to move to the next cell in the same column or use the arrow keys to navigate. <br><br>
-                    Autofill is a convenient feature in Excel that allows you to quickly fill a series or extend a pattern of data in a selected range of cells. It can save time and effort when working with repetitive data or creating sequences.
-                    <br><br><br><br><br>
-                    <iframe src="https://www.youtube.com/embed/HMXLU9TGogc" frameborder="0"></iframe>
-                </p>
-            </div>
-        </section>
         <div id="data_row"class="row d-flex">
             <div id="content" class="col-lg-6 col-md-6 col-12">
                 <div class="details">   
-                    <p id="fname"></p>
+                    <p class="target" id="fname"></p>
                     <p id="descrip"></p>
                     <p id="syntax"></p>
                     <p id="example"></p>
@@ -229,7 +169,8 @@
             <div id="video" class="col-lg-6 col-md-6 col-12">
                 <p id="youtube"></p>
             </div>
-    <script src="sccroll_out.js"></script>
+        </div>
+    </div>
     <script type="module">
         ScrollOut({
             targets: 'h1,p'
@@ -237,47 +178,139 @@
 
 
 
+//         // Import the functions you need from the SDKs you need
+//         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+//         import { getDatabase,set,ref,get,child,update,remove } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+//         import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"
+
+
+//         const firebaseConfig_Dataminer = {
+//     apiKey: "AIzaSyDOOwSq6c0x0DQrQe0gm8m8ikqGZ_nZST4",
+//     authDomain: "dataminer-a8d2c.firebaseapp.com",
+//     projectId: "dataminer-a8d2c",
+//     databaseURL:"https://dataminer-a8d2c-default-rtdb.firebaseio.com/",
+//     storageBucket: "dataminer-a8d2c.appspot.com",
+//     messagingSenderId: "390561026587",
+//     appId: "1:390561026587:web:0ba2c058c468ba1caf9ebe",
+//     measurementId: "G-RZVWQ59TNK"
+//   };
+
+
+//         // Initialize Firebase
+//         const app_Dataminer = initializeApp(firebaseConfig_Dataminer);
+//         //const database = getDatabase(app);
+//         const auth_Dataminer = getAuth();
+//         document.getElementById("logout").addEventListener("click", function () {
+//             signOut(auth_Dataminer).then(() => {
+//                 // Sign-out successful.
+//                 console.log("User logged out successfully.");
+//                 setTimeout(function () {
+//                     window.location.replace('/main/index.html')
+//                 }, 1000);
+//             })
+
+//         })
+//         .catch(function (error) {
+//             // An error happened.
+//             console.log("Error logging out user:", error);
+//         });
+
+
+//     </script>
+
+    <script type="module">
+
         // Import the functions you need from the SDKs you need
         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-        import { getDatabase,set,ref,get,child,update,remove } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-        import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"
+        import { getDatabase, set, ref, get, child, update, remove } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+        import { getAuth } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"
 
 
-        const firebaseConfig_Dataminer = {
-    apiKey: "AIzaSyDOOwSq6c0x0DQrQe0gm8m8ikqGZ_nZST4",
-    authDomain: "dataminer-a8d2c.firebaseapp.com",
-    projectId: "dataminer-a8d2c",
-    databaseURL:"https://dataminer-a8d2c-default-rtdb.firebaseio.com/",
-    storageBucket: "dataminer-a8d2c.appspot.com",
-    messagingSenderId: "390561026587",
-    appId: "1:390561026587:web:0ba2c058c468ba1caf9ebe",
-    measurementId: "G-RZVWQ59TNK"
-  };
-
+        const firebaseConfig_functions = {
+            apiKey: "AIzaSyBKu0V-GyMtrWXzheCJHQGD8pS7i3ifJ98",
+            authDomain: "functions-82c7e.firebaseapp.com",
+            projectId: "functions-82c7e",
+            databaseURL: "https://functions-82c7e-default-rtdb.firebaseio.com/",
+            storageBucket: "functions-82c7e.appspot.com",
+            messagingSenderId: "624087326619",
+            appId: "1:624087326619:web:00e464f50e896e4b4d0b3e",
+            measurementId: "G-PEYP4PJCRN"
+        };
 
         // Initialize Firebase
-        const app_Dataminer = initializeApp(firebaseConfig_Dataminer);
-        //const database = getDatabase(app);
-        const auth_Dataminer = getAuth();
-        document.getElementById("logout").addEventListener("click", function () {
-            signOut(auth_Dataminer).then(() => {
-                // Sign-out successful.
-                console.log("User logged out successfully.");
-                setTimeout(function () {
-                    window.location.replace('/main/index.html')
-                }, 1000);
-            })
+        const app_functions = initializeApp(firebaseConfig_functions);
+        const database = getDatabase(app_functions);
+        const auth_functions = getAuth();
 
-        })
-        .catch(function (error) {
-            // An error happened.
-            console.log("Error logging out user:", error);
+
+        var stdNo = 0;
+        var column1 = document.getElementById('content');
+        var column2 = document.getElementById('video');
+        var row = document.getElementById('data_row');
+        function AddItemToTable(name, ftype, description, syntax, example, youtube_link) {
+            let Div1 = document.createElement('div');
+            let Div2 = document.createElement('div');
+            let Fname = document.createElement("p");
+            let Ftype = document.createElement('p');
+            let Description = document.createElement('p');
+            let Syntax = document.createElement('p');
+            let Example = document.createElement('p');
+            let Youtube = document.createElement('iframe'); // Use an <iframe> element
+
+            Fname.innerHTML = name;
+            Fname.classList.add('function-type');
+            Ftype.innerHTML = "Function Type: " + ftype;
+            Ftype.classList.add('function-name');
+            Description.innerHTML = description;
+            Description.classList.add('below-text');
+            Syntax.innerHTML = syntax;
+            Syntax.classList.add('syntax');
+            Example.innerHTML = example;
+            Example.classList.add('example');
+            Youtube.src = youtube_link; // Set the src attribute of the <iframe> element
+            Youtube.classList.add('video-iframe'); // Add CSS class
+
+            Div1.appendChild(Fname);
+            Div1.appendChild(Ftype);
+            Div1.appendChild(Description);
+            Div1.appendChild(Syntax);
+            Div1.appendChild(Example);
+            Div2.appendChild(Youtube);
+            column1.appendChild(Div1);
+            column2.appendChild(Div2);
+            row.appendChild(column1);
+            row.appendChild(column2);
+        }
+        function AddAllItemsToTable(TheStudent,f_name) {
+            column1.innerHTML = "";
+            column2.innerHTML = "";
+            TheStudent.forEach(element => {
+                if (element.Ftype === f_name) {
+                    AddItemToTable(element.Name, element.Ftype, element.Description, element.Syntax, element.Example, element.Youtube);
+                }
+            });
+        }
+        
+        function GetAllDataOnce(f_name){
+            const dbRef = ref(database);
+            get(child(dbRef, "users"))
+            .then((snapshot) => {
+                var students = [];
+                snapshot.forEach(childSnapshot => {
+                    students.push(childSnapshot.val());
+                });
+                AddAllItemsToTable(students,f_name);
+            });
+        }
+        var searchBar = document.getElementById('mySearch');
+        var searchBtn = document.getElementById('bttn');
+        var target = document.getElementById('fname');
+        
+        searchBtn.addEventListener('click', () => {
+        var searchValue = searchBar.value.toUpperCase();
+        GetAllDataOnce(searchValue);
         });
-
-
     </script>
-
-
 </body>
 
 </html>
