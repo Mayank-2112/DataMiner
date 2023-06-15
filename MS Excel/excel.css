@@ -124,7 +124,7 @@ header .content .para{
     color: #388E3C;
     margin: 20px;
 }
-#search a{
+#search #bttn, header .content a{
     background-color: #8BC34A;
     color: white;
     padding: 8px 10px;
@@ -135,7 +135,7 @@ header .content .para{
     margin-left: 10px;
     text-decoration: none;
 }
-header .content .bttn:hover{
+header .content #bttn:hover{
     transform: scale(1.1);
     box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }
@@ -163,21 +163,21 @@ header img{
 .col-lg-3{
     display: flex;
 }
-#data-row{
+#data-row,#data-row_all{
     margin: 20px 0;
 }
-#fname{
+#fname,#fname_all{
     font-size: 2.5em;
     font-weight: bolder;
     color: #272343;
     font-style: oblique;
 }
-#example,#syntax{
+#example,#syntax,#example_all,#syntax_all{
     color: #8BC34A;
     font-size: 1.5em;
     font-weight: 600;
 }
-#descrip{
+#descrip,#descrip_all{
     font-size: 1.5em;
     font-weight: 500;
 }
@@ -186,7 +186,7 @@ iframe{
     height: 250px;
     margin: 10px 60px;
 }
-.details{
+.details, .details_all{
     margin-bottom: 100px;
 }
 .function-name {

@@ -170,6 +170,21 @@
             </div>
         </div>
     </div>
+    <article>
+        <div id="data_row_all"class="row d-flex">
+            <div id="content_all" class="col-lg-6 col-md-6 col-12">
+                <div class="details_all">   
+                    <p id="fname_all"></p>
+                    <p id="descrip_all"></p>
+                    <p id="syntax_all"></p>
+                    <p id="example_all"></p>
+                </div>
+            </div>
+            <div id="video_all" class="col-lg-6 col-md-6 col-12">
+                <p id="youtube_all"></p>
+            </div>
+        </div>
+    </article>
     <script type="module">
         
 
@@ -241,8 +256,11 @@
 
         var stdNo = 0;
         var column1 = document.getElementById('content');
+        var column1_all = document.getElementById('content_all');
         var column2 = document.getElementById('video');
+        var column2_all = document.getElementById('video_all');
         var row = document.getElementById('data_row');
+        var row_all = document.getElementById('data_row_all');
         function AddItemToTable(name, ftype, description, syntax, example, youtube_link) {
             let Div1 = document.createElement('div');
             let Div2 = document.createElement('div');
@@ -306,6 +324,62 @@
         var searchValue = searchBar.value.toUpperCase();
         GetAllDataOnce(searchValue);
         });
+        function AddItemToTableALL(name, ftype, description, syntax, example, youtube_link) {
+            let Div1 = document.createElement('div');
+            let Div2 = document.createElement('div');
+            let Fname = document.createElement("p");
+            let Ftype = document.createElement('p');
+            let Description = document.createElement('p');
+            let Syntax = document.createElement('p');
+            let Example = document.createElement('p');
+            let Youtube = document.createElement('iframe'); // Use an <iframe> element
+
+            Fname.innerHTML = name;
+            Fname.classList.add('function-type');
+            Ftype.innerHTML = "Function Type: " + ftype;
+            Ftype.classList.add('function-name');
+            Description.innerHTML = description;
+            Description.classList.add('below-text');
+            Syntax.innerHTML = syntax;
+            Syntax.classList.add('syntax');
+            Example.innerHTML = example;
+            Example.classList.add('example');
+            Youtube.src = youtube_link; // Set the src attribute of the <iframe> element
+            Youtube.classList.add('video-iframe'); // Add CSS class
+
+            Div1.appendChild(Fname);
+            Div1.appendChild(Ftype);
+            Div1.appendChild(Description);
+            Div1.appendChild(Syntax);
+            Div1.appendChild(Example);
+            Div2.appendChild(Youtube);
+            column1_all.appendChild(Div1);
+            column2_all.appendChild(Div2);
+            row_all.appendChild(column1_all);
+            row_all.appendChild(column2_all);
+        }
+        function AddAllItemsToTableALL(TheStudent,f_name) {
+            column1.innerHTML = "";
+            column2.innerHTML = "";
+            TheStudent.forEach(element => {
+                if (element.Name === f_name) {
+                    AddItemToTable(element.Name, element.Ftype, element.Description, element.Syntax, element.Example, element.Youtube);
+                }
+            });
+        }
+        
+        function GetAllDataOnceALL(f_name){
+            const dbRef = ref(database);
+            get(child(dbRef, "users"))
+            .then((snapshot) => {
+                var students = [];
+                snapshot.forEach(childSnapshot => {
+                    students.push(childSnapshot.val());
+                });
+                AddAllItemsToTable(students,f_name);
+            });
+        }
+        window.onload = GetAllDataOnce('Logical');
     </script>
 </body>
 
