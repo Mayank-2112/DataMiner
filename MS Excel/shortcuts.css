@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #DDEEDF;
+}
+.top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background-color: #8BC34A;
+    color: white;
+    border: none;
+    width: 50px;
+    font-size: 1rem;
+    text-align: center;
+    height: 40px;
+}
+.navbar .logo1{
+    width: 100px;
+    height: 100px;
+}
+.navbar .logo2{
+    position: absolute;
+    top: -30px;
+    left: 80px;
+    width: 200px;
+    height: 200px;
+}
+.navbar{
+    padding:0 30px;
+    background-color: #8BC34A;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu a{
+    color:#8BC34A;
+}
+.navbar .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{
+    background-color: #388E3C;
+    color: white;
+}
+
+.navbar .navbar-nav .nav-item a{
+    padding: 0 15px 0 15px;
+    color:#DDEEDF;
+    font-size: 1.2rem;
+    transition: 1s;
+}
+.navbar .navbar-nav .nav-item .drop-container{
+    display: none;
+    background-color: #DDEEDF;
+    padding: 5px;
+}
+.navbar .navbar-nav .nav-item a:hover{
+    font-weight: bold;
+    transform: scale(1.1);
+}
+.navbar .navbar-nav .nav-but{
+    margin: 0 10px 0 10px;
+}
+.navbar .navbar-nav .nav-but a{
+    color:#DDEEDF;
+    border: 1px solid #DDEEDF;
+    transition: 1s;
+}
+.navbar .navbar-nav .nav-but a:hover{
+    background-color: #DDEEDF;
+    color:#8BC34A ;
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.scrollable-menu{
+    height: auto;
+    max-height: 300px;
+    overflow-x: hidden;
+}
+
+.row{
+    margin-top: 250px;
+    position: relative;
+}
+table thead{
+    margin-bottom: 20px;
+}
+.table thead .views-field{
+    font-size: 1.7rem;
+    font-weight: bolder;
+    font-style: italic;
+}
+.views-field-title a{
+    pointer-events: none;
+    text-decoration: none;
+    color: #272343;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: not-allowed;
+}
+.kbd{
+    background-color: #DDEEDF;
+    border: 2px solid black;
+    color: #388E3C;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+}
