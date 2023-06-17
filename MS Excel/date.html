@@ -203,7 +203,7 @@
             column1.innerHTML = "";
             column2.innerHTML = "";
             TheStudent.forEach(element => {
-                if (element.Ftype === f_name) {
+                if (element.Ftype === f_name || element.Ftype === 'Date and time') {
                     AddItemToTable(element.Name, element.Ftype, element.Description, element.Syntax, element.Example, element.Youtube);
                 }
             });
