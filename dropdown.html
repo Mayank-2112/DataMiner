@@ -119,389 +119,80 @@ for (i = 0; i < dropdown.length; i++) {
 
 </body>
 </html> 
-<div class="functions">
-  <h1 id="logical">Logical Functions</h1>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">AND</p>
-          <p id="descrip">The AND function is used to check if all specified conditions are true. It returns TRUE if all conditions are met; otherwise, it returns FALSE.</p>
-          <p id="syntax">AND(logical1, logical2, ...)</p>
-          <p id="example">=AND(A1>10, B1<20)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/ew6QHUq1Tn4" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">OR</p>
-          <p id="descrip">Returns TRUE if any argument evaluates to TRUE.</p>
-          <p id="syntax">=OR(logical1,logical2,...)</p>
-          <p id="example">=OR(A2>=10,B2<5)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/ew6QHUq1Tn4" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">NOT</p>
-          <p id="descrip">Returns the reserved local value of its argument . i.e. If the argument is FALSE then TRUE is returned and vice versa.</p>
-          <p id="syntax">=NOT(LOGICAL)</p>
-          <p id="example">=NOT(A2>=10)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/ew6QHUq1Tn4" frameborder="0"></iframe>
-  </div>
-</div>
-<h1 id="financial">Financial Functions</h1>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">FV</p>
-          <p id="descrip">The FV function calculates the future value of an investment or loan, which is the value of an investment at a specified future date.</p>
-          <p id="syntax">FV(rate, nper, pmt, [pv], [type])</p>
-          <p id="example">=FV(0.06, 10, -500, -1000)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/OHvoIy9H5_E" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">NPV</p>
-          <p id="descrip">The NPV function calculates the net present value of a series of cash flows, which represents the difference between the present value of cash inflows and outflows.</p>
-          <p id="syntax">NPV(rate, value1, [value2], ...)</p>
-          <p id="example">=NPV(0.1, -1000, 500, 300, 400)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/Q_lqNmVzgMY" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">PMT</p>
-          <p id="descrip">The PMT function calculates the periodic payment for a loan or investment based on a constant interest rate and equal payments.</p>
-          <p id="syntax">PMT(rate, nper, pv, [fv], [type])</p>
-          <p id="example">=PMT(0.05, 10, 10000)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/gcgTF5cBj7o" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">PV</p>
-          <p id="descrip">The PV function calculates the present value of an investment or loan, which is the current worth of a future stream of cash flows.</p>
-          <p id="syntax">PV(rate, nper, pmt, [fv], [type])</p>
-          <p id="example">=PV(0.08, 5, -1000)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/EDIgumma8dQ" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">RATE</p>
-          <p id="descrip">The RATE function calculates the interest rate per period for an investment or loan. </p>
-          <p id="syntax">RATE(nper, pmt, pv, [fv], [type], [guess])</p>
-          <p id="example">=RATE(10, -500, 10000)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/OKc5QoBQcCo" frameborder="0"></iframe>
-  </div>
-</div>
-<h1 id="math">Math Functions</h1>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">AVERAGE</p>
-          <p id="descrip">The AVERAGE function calculates the arithmetic mean of a range of numbers.</p>
-          <p id="syntax">AVERAGE(number1, number2, ...)</p>
-          <p id="example">=AVERAGE(A1:A5)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://youtu.be/embed/1xD_pdAnU0c" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">POWER</p>
-          <p id="descrip">The POWER function raises a number to a specified power</p>
-          <p id="syntax">POWER(number, power)</p>
-          <p id="example">=POWER(A1, 2)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://youtu.be/embed/JL1S08DzhAY" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">ROUND</p>
-          <p id="descrip">The ROUND function rounds a number to a specified number of decimal places</p>
-          <p id="syntax">ROUND(number, num_digits)</p>
-          <p id="example">=ROUND(A1, 2)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://youtu.be/embed/k7IPX8Zr13w" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">SQRT</p>
-          <p id="descrip">The SQRT function calculates the square root of a number</p>
-          <p id="syntax">SQRT(number)</p>
-          <p id="example">=SQRT(A1)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://youtu.be/embed/bjoFT8byRlI" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">SUM</p>
-          <p id="descrip">The SUM function is used to add up a range of numbers</p>
-          <p id="syntax">SUM(number1, number2, ...)</p>
-          <p id="example">=SUM(A1:A5)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://youtu.be/embed/-u-9f3QrdAQ" frameborder="0"></iframe>
-  </div>
-</div>
-<h1 id="trigonometry">Trigonometric Functions</h1>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">COS</p>
-          <p id="descrip">The COS function returns the cosine of an angle in radians.</p>
-          <p id="syntax">COS(angle)</p>
-          <p id="example">=COS(45)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/wO7mADMVuGM" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">COSH</p>
-          <p id="descrip">Returns the hyperbolic cosine of a number.</p>
-          <p id="syntax">COSH(number)</p>
-          <p id="example">=COSH(45)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/UFZQ0kDwnSU" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">SIN</p>
-          <p id="descrip">The SIN function returns the sine of an angle in radians.</p>
-          <p id="syntax">SIN(angle)</p>
-          <p id="example">=SIN(45)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/wO7mADMVuGM" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">SINH</p>
-          <p id="descrip">Returns the hyperbolic sine of a number.</p>
-          <p id="syntax">SINH(number)</p>
-          <p id="example">=SINH(45)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/j0ShoSmxaVU" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">TAN</p>
-          <p id="descrip">The TAN function returns the tangent of an angle in radians.</p>
-          <p id="syntax">TAN(angle)</p>
-          <p id="example">=TAN(70)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/wO7mADMVuGM" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">TANH</p>
-          <p id="descrip">Returns the hyperbolic tangent of a number.</p>
-          <p id="syntax">TANH(number)</p>
-          <p id="example">=TANH(56)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://youtu.be/embed/k7IPX8Zr13w" frameborder="0"></iframe>
-  </div>
-</div>
-<h1 id="lookup">Lookup and Reference Functions</h1>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">HLOOKUP</p>
-          <p id="descrip"> The HLOOKUP function works similarly to VLOOKUP but searches for a value in the top row of a table and returns a value from the same column in a specified row</p>
-          <p id="syntax">HLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</p>
-          <p id="example">=HLOOKUP(A2, B2:D10, 3, FALSE)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="www.youtube.com/embed/1Jil9i1FIC4" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">VLOOKUP</p>
-          <p id="descrip"> The VLOOKUP function searches for a value in the leftmost column of a table and returns a value in the same row from a specified column</p>
-          <p id="syntax">VLOOKUP(lookup_value, table_array, row_index_num, [range_lookup])</p>
-          <p id="example">=VLOOKUP(A2, B2:D10, 3, FALSE)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="www.youtube.com/embed/0d1AMHFSRaY" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">INDEX</p>
-          <p id="descrip">The INDEX function returns the value of a cell in a specified row and column within a range</p>
-          <p id="syntax">INDEX(array, row_num, [column_num])</p>
-          <p id="example">=INDEX(A1:D10, 3, 2)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/40J4DARYrxM" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">INDIRECT</p>
-          <p id="descrip">The INDIRECT function returns the value specified by a text string as a reference. It is often used to create dynamic references in formulas.</p>
-          <p id="syntax">INDIRECT(ref_text, [a1])</p>
-          <p id="example">=INDIRECT("A1")</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/d3O2ME8qRf8" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">MATCH</p>
-          <p id="descrip">The MATCH function searches for a specified value in a range and returns the relative position of that value</p>
-          <p id="syntax">MATCH(lookup_value, lookup_array, [match_type])</p>
-          <p id="example">=MATCH(A2, B2:B10, 0)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://youtu.be/embed/k7IPX8Zr13w" frameborder="0"></iframe>
-  </div>
-</div>
-<h1 id="engineering">Engineering Functions</h1>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">DEC2BIN</p>
-          <p id="descrip">The DEC2BIN function in Excel is used to convert a decimal number into its binary representation. It takes a decimal number as input and returns a string that represents the binary equivalent of that number.</p>
-          <p id="syntax">DEC2BIN(number, [places])</p>
-          <p id="example">DEC2BIN(A1, 8)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://youtu.be/embed/k7IPX8Zr13w" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">DEC2BIN</p>
-          <p id="descrip">The DEC2OCT function in Excel is used to convert a decimal number into its octal representation. It takes a decimal number as input and returns a text string that represents the octal equivalent of that number.</p>
-          <p id="syntax">DEC2OCT(number)</p>
-          <p id="example">DEC2OCT(A1)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://youtu.be/embed/k7IPX8Zr13w" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">DELTA</p>
-          <p id="descrip">The DELTA function in Microsoft Excel is used to compare two values and returns 1 if they are equal, and 0 if they are not equal. It is primarily used as a logical function to test for equality.</p>
-          <p id="syntax">DELTA(number1, number2)</p>
-          <p id="example">DELTA(A1, B1)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/sp0dzF9yhBs" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">HEX2DEC</p>
-          <p id="descrip">The HEX2DEC function in Excel is used to convert a hexadecimal (base-16) number into its decimal (base-10) representation. It takes a hexadecimal number as input and returns the equivalent decimal value.</p>
-          <p id="syntax">HEX2DEC(number)/p>
-          <p id="example">HEX2DEC(A1)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/2Gbl4xxAGfs" frameborder="0"></iframe>
-  </div>
-</div>
-<div id="data_row"class="row d-flex">
-  <div id="content" class="col-lg-6 col-md-6 col-12">
-      <div class="details">   
-          <p id="fname">OCT2DEC</p>
-          <p id="descrip"> The OCT2DEC function in Excel is used to convert an octal number into its decimal representation. It takes an octal number as input and returns the equivalent decimal value.</p>
-          <p id="syntax">OCT2DEC(number)</p>
-          <p id="example">OCT2DEC(A1)</p>
-      </div>
-  </div>
-  <div id="video" class="col-lg-6 col-md-6 col-12">
-      <iframe src="https://www.youtube.com/embed/z8Wp7u9wy2Y" frameborder="0"></iframe>
-  </div>
-</div>
+<ul class="dropdown-menu scrollable-menu bg-light">
+  <li><a class="dropdown-item" href="/MS Excel/logical.html">Logical</a></li>
+  <li><a class="dropdown-item" href="/MS Excel/date.html">Date and TIme</a></li>
+  <li><a class="dropdown-item" href="/MS Excel/lookup.html">Lookup and Reference</a></li>
+  <li><a class="dropdown-item" href="#">Text</a></li>
+  <li><a class="dropdown-item" href="#">Dynamic array</a></li>
+  <li><a class="dropdown-item" href="/MS Excel/engineering.html">Engineering</a></li>
+  <li><a class="dropdown-item" href="/MS Excel/financial.html">Financial</a></li>
+  <li><a class="dropdown-item" href="#">Information</a></li>
+  <li><a class="dropdown-item" href="/MS Excel/math.html">Math</a></li>
+  <li><a class="dropdown-item" href="/MS Excel/trigonometry.html">Trigonometry</a></li>
+  <li><a class="dropdown-item" href="#">Statistical</a></li>
+  <li><a class="dropdown-item" href="#">Web</a></li>
+  <li><a class="dropdown-item" href="#">Database</a></li>
+</ul>
 
-</div>
+<ul class="dropdown-menu scrollable-menu bg-light">
+  <li><a class="dropdown-item" href="#">File</a></li>
+  <li><a class="dropdown-item" href="#">Ribbon</a></li>
+  <li><a class="dropdown-item" href="#">General</a></li>
+  <li><a class="dropdown-item" href="#">Tables and Filters</a></li>
+  <li><a class="dropdown-item" href="#">Drag and Drop</a></li>
+  <li><a class="dropdown-item" href="#">Navigation</a></li>
+  <li><a class="dropdown-item" href="#">Selection</a></li>
+  <li><a class="dropdown-item" href="#">Active cell</a></li>
+  <li><a class="dropdown-item" href="#">Extend Selection</a></li>
+  <li><a class="dropdown-item" href="#">Select Special</a></li>
+  <li><a class="dropdown-item" href="#">Call edit mode</a></li>
+  <li><a class="dropdown-item" href="#">Entering data</a></li>
+  <li><a class="dropdown-item" href="#">Formatting</a></li>
+  <li><a class="dropdown-item" href="#">Number Formatting</a></li>
+  <li><a class="dropdown-item" href="#">Borders</a></li>
+  <li><a class="dropdown-item" href="#">Formulas</a></li>
+  <li><a class="dropdown-item" href="#">Grid Operations</a></li>
+  <li><a class="dropdown-item" href="#">Pivot Tables</a></li>
+  <li><a class="dropdown-item" href="#">Workbook</a></li>
+  <li><a class="dropdown-item" href="#">Dialog boxes</a></li>
+  <li><a class="dropdown-item" href="#">Other</a></li>
+
+</ul>
+<ul class="dropdown-menu bg-light">
+  <li><a class="dropdown-item" href="#">Bar Chart</a></li>
+  <li><a class="dropdown-item" href="#">Line chart</a></li>
+  <li><a class="dropdown-item" href="#">Line graph</a></li>
+  <li><a class="dropdown-item" href="#">Treemap</a></li>
+  <li>
+      <hr class="dropdown-divider">
+  </li>
+  <li><a class="dropdown-item" href="#">Others</a></li>
+</ul>
+<ul class="dropdown-menu scrollable-menu" role="menu">
+  <li><a class="dropdown-item" href="#">Count</a></li>
+  <li><a class="dropdown-item" href="#">Sum</a></li>
+  <li><a class="dropdown-item" href="#">Average</a></li>
+  <li><a class="dropdown-item" href="#">Dynamic array</a></li>
+  <li><a class="dropdown-item" href="#">Min and Max</a></li>
+  <li><a class="dropdown-item" href="#">Lookup</a></li>
+  <li><a class="dropdown-item" href="#">If</a></li>
+  <li><a class="dropdown-item" href="#">Grouping</a></li>
+  <li><a class="dropdown-item" href="#">Conditional Formatting</a></li>
+  <li><a class="dropdown-item" href="#">Data Validation</a></li>
+  <li><a class="dropdown-item" href="#">Rank</a></li>
+  <li><a class="dropdown-item" href="#">Date and Time</a></li>
+  <li><a class="dropdown-item" href="#">Date series</a></li>
+  <li><a class="dropdown-item" href="#">Text</a></li>
+  <li><a class="dropdown-item" href="#">Financial</a></li>
+  <li><a class="dropdown-item" href="#">Geometry</a></li>
+  <li><a class="dropdown-item" href="#">Workbook</a></li>
+  <li><a class="dropdown-item" href="#">Internet</a></li>
+  <li><a class="dropdown-item" href="#">Names</a></li>
+  <li><a class="dropdown-item" href="#">Percentage</a></li>
+  <li><a class="dropdown-item" href="#">Random</a></li>
+  <li><a class="dropdown-item" href="#">Range</a></li>
+  <li><a class="dropdown-item" href="#">Tables</a></li>
+  <li><a class="dropdown-item" href="#">Errors</a></li>
+  <li><a class="dropdown-item" href="#">Miscellaneous</a></li>
+</ul>
