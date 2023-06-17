@@ -161,11 +161,11 @@
         const auth_functions = getAuth();
 
 
-        var stdNo = 0;
         var column1 = document.getElementById('content');
         var column2 = document.getElementById('video');
-        var row = document.getElementById('data_row');
+        var Container = document.getElementById('container');
         function AddItemToTable(name, ftype, description, syntax, example, youtube_link) {
+            let row = document.createElement('div');
             let Div1 = document.createElement('div');
             let Div2 = document.createElement('div');
             let Fname = document.createElement("p");
@@ -187,19 +187,21 @@
             Example.classList.add('example');
             Youtube.src = youtube_link; // Set the src attribute of the <iframe> element
             Youtube.classList.add('video-iframe'); // Add CSS class
-
+            row.classList.add('row','d-flex')
+            row.id = 'data-row';
+            Div1.classList.add('col-lg-6','col-md-6','col-12');
+            Div2.classList.add('col-lg-6','col-md-6','col-12');
             Div1.appendChild(Fname);
             Div1.appendChild(Ftype);
             Div1.appendChild(Description);
             Div1.appendChild(Syntax);
             Div1.appendChild(Example);
             Div2.appendChild(Youtube);
-            column1.appendChild(Div1);
-            column2.appendChild(Div2);
-            row.appendChild(column1);
-            row.appendChild(column2);
+            row.appendChild(Div1);
+            row.appendChild(Div2);
+            Container.appendChild(row);
         }
-        function AddAllItemsToTable(TheStudent,f_name) {
+function AddAllItemsToTable(TheStudent,f_name) {
             column1.innerHTML = "";
             column2.innerHTML = "";
             TheStudent.forEach(element => {
