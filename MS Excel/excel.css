@@ -205,11 +205,46 @@ iframe{
   .below-text {
     font-weight: 600;
   }
-  
+.container{
+    margin-top: 150px;
+}
 
+#video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#video img{
+    width: 80%;
+    height: 400px;
+    margin-left: 60px;
+    margin-bottom: 50px;
+}
+#video iframe{
+    width: 80%;
+    height: 400px;
 
-
-
+}
+.main-heading{
+    color: #388E3C;
+    font-style: italic;
+    font-weight: bolder;
+}
+.sub-heading{
+    color: #272343;
+    font-style: oblique;
+    font-weight: bold;
+}
+#content span{
+    color: #8BC34A;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+    #content p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    
+}
 
 
 
@@ -285,10 +320,8 @@ section .content h1::before{
 }
 section .content p{
     font-size: 1.2em;
-    transition: 1.3s ease-in;
-    opacity: 0;
-}
-section .content p[data-scroll='in']{
+    }
+section .content p, #content p[data-scroll='in']{
         opacity: 1;
 }
 section .content hr{
